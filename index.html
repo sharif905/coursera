@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<title>Coursera.com</title>
+</head>
+<style type="text/css">
+*{margin:0; padding:0;}
+body{font-family: awesome;}
+a{text-decoration: none;}
+ul{list-style-type: none;}
+button{border: none;}
+.float_left{float: left;}
+.float_right{float: right;}
+.full_wrap{width:100%; margin:0 auto;}
+.content{margin:3% 5%; display: block;}
+header{
+	display: block;
+	height:70px;
+	border-bottom:0.8px solid #ddd;
+	background: #fff;
+	position: fixed;
+	z-index:99;
+	padding-bottom:25px;
+}
+header .content span{
+	font-size: 35px;
+	background:#fff;
+	cursor: pointer;
+	line-height:70px;
+	height: 20px;
+	margin-top:-15px;
+}
+.sidenav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+	border-right: 2px solid #ddd;
+}
+.sidenav a {
+	padding: 8px 8px 16px 32px;
+	text-decoration: none;
+	font-size: 15px;
+	color: #333;
+	display: block;
+	transition: 0.3s;
+}
+.sidenav #join,#login{
+	width:80%;
+	border: none;
+	background: #2072d5;
+	color: #fff;
+	padding:20px 30px;
+	margin-left: 20px;
+	margin-bottom:15px;
+	font-weight: bold;
+}
+.sidenav #login{
+	border: 1px solid #2072d5;
+	background: #fff;
+	color:#2072d5;
+}
+.sidenav a:hover {
+	color: #f1f1f1;
+}
+	
+.sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 10px;
+	font-size: 36px;
+}	
+header .content .logo img{
+	margin-left: 20px;
+
+	
+}
+.join_bg{
+	background: radial-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT-ZfGsj-Xifx3y_K5_lu4_dZb3UjIMsXJebg&usqp=CAU');
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top:70px;
+	display: block;
+	overflow: hidden;
+}
+.join{
+	padding-top: 25%;
+	height:300px;
+	color: #fff;
+	text-align: center;
+}
+.join h1{
+	margin:0 10%;
+}
+.join p{
+	margin:20px 10px;
+	color: #fff;
+}
+.join button{
+	padding: 15px 30px;
+	border-radius: 8px;
+	color: #2773cd;
+	font-weight: bold;
+	font-size: 1.2em;
+	margin-top: 30px;
+	cursor: pointer;
+	background: #fff;
+}
+.join button:hover{
+	background: #2773cd;
+	color: #fff;
+}
+.partner{
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+	margin: 0;
+	overflow: hidden;
+}
+.partner a{
+	margin:30px 20px;
+	display: block;
+	color:#2773cd;
+}
+.partner img{
+	width: 60px;
+	height: 35px;
+	padding-right:15px;
+	margin-bottom: 20px;
+	margin-left: 30px;
+	float: left;
+	
+}
+.skill_wrap{
+	text-align: center;
+}
+.skill_wrap h1{
+	padding:20px 0;
+	padding-bottom: 40px;
+}
+.skill_wrap .skill{
+	padding-bottom:40px;
+}
+.skill_wrap .skill img{
+	width: 60px;
+	height: auto;
+	padding:20px 0;
+}
+.skill_wrap .skill h3,p{
+	color:#727272;
+}
+.learner{
+	background: #d6edf5;
+	padding-bottom:40px;
+}
+.learner img{
+	width:90px;
+	height: auto;
+	margin-left:30px;
+}
+.learner .float_right{
+	margin-right: 30px;
+}
+.learner_c{
+	padding:20px 0;
+}
+.learner_c h2{
+	font-weight: normal;
+	padding: 30px 0;
+	color: #3d4245;
+}
+.learner_c h2 strong{
+	color: #000;
+}
+.learner_c h4{
+	font-weight: normal;
+	padding-bottom:15px;
+	color: #3d4245;
+}
+.learner_c button{
+	padding: 15px 20px;
+	border: none;
+	border-radius: 5px;
+	background: #2072d5;
+	color:#fff;
+	font-weight: bold;
+	font-size:1em;
+}
+.learner_c .trycoursera{
+	border:1px solid #2072d5;
+	background: #fff;
+	color: #2072d5;
+	margin-left:20px;
+}
+.learner_c .trycoursera:hover{
+	background: #2072d5;
+	color: #fff;
+}
+.world_class h1{
+	padding:90px 0;
+	text-align: center;
+}
+.world_class .single_post{
+	margin-bottom: 60px;
+}
+.world_class .million{
+	font-weight: normal;
+	text-align: center;
+	padding-bottom:80px;
+}
+.world_class .single_post font{
+	color: #636363;
+	margin-bottom:20px;
+	display: block;
+	font-weight: bold;
+}
+.world_class .single_post h2{
+	font-weight: normal;
+	margin-bottom:30px;
+}
+.world_class .single_post h3{
+	font-weight: normal;
+	font-size:1.2em;
+	margin-bottom:20px;
+}
+.world_class .single_post p{
+	
+}
+.world_class .single_post img{
+	width:90%;
+	height:auto;
+}
+.catalog{
+	background: #fcf4cf;
+	padding-bottom:30px;
+}
+.catalog h1{
+	font-weight: normal;
+	padding: 40px 0;
+	font-size: 1.5em;
+}
+.catalog p{
+	color:#333;
+	padding-bottom: 20px;
+}
+.catalog button{
+	padding: 15px 20px;
+	border: none;
+	border-radius: 5px;
+	background: #2072d5;
+	color:#fff;
+	font-weight: bold;
+	font-size:1em;
+}
+.catalog button:hover{
+	background: #fff;
+	color: #2072d5;
+}
+.customers .visitor{
+	padding: 30px 0;
+	display: block;
+	overflow: hidden;
+}
+.customers .visitor h1{
+	margin-left:20px;
+	font-size:2.5em;
+}
+.customers .visitor p{
+	padding: 13px 0;
+}
+.customers .customer_logo img{
+	width:30%;
+	height: 30px;
+	padding-bottom: 20px;
+	margin-left:10px;
+}
+.learn_more {
+	padding-top:40px;
+	padding-bottom:130px;
+}
+.learn_more h1{
+	padding:20px 0;
+}
+.learn_more p{
+	color:#333;
+	padding-bottom:20px;
+}
+.learn_more button{
+	padding:15px 20px;
+	border:1px solid #2072d5;
+	background:#fff;
+	color:#2072d5;
+	font-size:1em;
+	font-weight: bold;
+}
+.learn_more button:hover{
+	background: #2072d5;
+	color:#fff;
+}
+.footer_list{
+	background: #f8f8f8;
+	padding-top:30px;
+	border-bottom: 1px solid #ddd;
+}
+.footer_list .ftop_list{
+	padding-bottom:20px;
+}
+.footer_list .ftop_list h2{
+	font-size:1em;
+}
+.footer_list .ftop_list a{
+	color:#000;
+	font-size:0.8em;
+	display: block;
+	margin: 10px 0;
+}
+.footer_list .ftop_list a:hover{
+	text-decoration: underline;
+}
+.fbottom_list{
+	width:390px;
+	display: block;
+	overflow: hidden;
+}
+.fbottom_list .colomn_list{
+	width:33%;
+	float:left;
+}
+.fbottom_list .colomn_list h2{
+	font-size:100%;
+}
+.fbottom_list .colomn_list a{
+	font-size: 90%;
+	display: block;
+	color:#000;
+	margin: 10px 0;
+}
+.fbottom_list .colomn_list a:hover{
+	text-decoration: underline;
+}
+.social_icon .app{
+	display: block;
+	padding: 30px 0;
+}
+.social_icon .app img{
+	width:40%;
+	margin:10px;
+}
+.social_icon ul{
+
+}
+.social_icon ul li{
+	display: inline;
+}
+.social_icon ul li a img{
+	width:25px;
+	height: auto;
+	margin:0 10px;
+	padding-bottom: 20px;
+}
+footer{
+	padding-bottom:40px;
+}
+footer p{
+	font-size: 0.8em;
+}
+</style>
+<body>
+	<header class="full_wrap">
+		<div class="content">
+			<span class="float_left" onclick="openNav()">&Congruent;</span>
+			<!------- Side Nav------>
+			<div id="mySidenav" class="sidenav">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<a href="#">Explore</a>
+				<a href="#">For Enterprise</a>
+				<a href="#">For Student</a>
+				<a href="#">Get Our App</a>
+				<button id="join">Join for Free</button>
+				<button id="login">Log In</button>
+			</div>
+			<script>
+				function openNav() {
+				document.getElementById("mySidenav").style.width = "250px";
+				}
+				function closeNav() {
+				document.getElementById("mySidenav").style.width = "0";
+				}
+			</script>
+			
+			<div class="logo">
+				<img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjIuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgogICB3aWR0aD0iMTA4cHgiIGhlaWdodD0iMTdweCIgdmlld0JveD0iMCAwIDEwOCAxNyIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTA4IDE3IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZmlsbD0iIzJBNzNDQyIgZD0iTTU0LjI4MSw1Ljc3M2MwLjA2Ni0xLjI2OSwwLjUyMS0yLjMwNiwxLjIzMi0zLjExNVYxLjU4aC0wLjk0NWMtMS45MSwwLTMuNTI3LDAuNzMyLTQuNDY3LDIuMzg2aC0wLjA1NQogIFYxLjc2MmgtNC44OTl2MTMuNDQxaDQuOVY5Ljc3N2MwLTIuMzAzLDAuNjc0LTQuMDU5LDMuMzkzLTQuMDU5QzUzLjczNiw1LjcyLDU0LjAxMyw1LjczNyw1NC4yODEsNS43NzN6Ii8+CjxwYXRoIGZpbGw9IiMyQTczQ0MiIGQ9Ik05MS4zOCw1LjcyNGMwLjQwNy0xLjE4OCwxLjA2Ny0yLjI0NiwxLjkyNS0zLjA5NXYtMS4wNWgtMC45NDNjLTEuOTExLDAtMy41MjYsMC43MzItNC40NzEsMi4zODVoLTAuMDUzCiAgVjEuNzYyaC00LjkwMnYxMy40NDFoNC45MDJWOS43NzdjMC0yLjMwMywwLjY3Ni00LjA1OSwzLjM5NS00LjA1OUw5MS4zOCw1LjcyNHoiLz4KPHBhdGggZmlsbD0iIzJBNzNDQyIgZD0iTTY0LjIzMiw1LjIyYy0wLjc1Ni0wLjM5My0xLjgwOC0wLjY1NS0yLjY0NS0wLjY1NWMtMC41NjIsMC0xLjUzMywwLjIzNC0xLjUzMywwLjkxNwogIGMwLDAuOTE4LDEuNTMzLDEuMDQ4LDIuMjExLDEuMTgyYzIuMjg0LDAuNDQ0LDQuMDEyLDEuNDkzLDQuMDEyLDMuOTc5YzAsMy41MzYtMy4zMTMsNS4wMDgtNi41Miw1LjAwOAogIGMtMS45NjcsMC0zLjkwMi0wLjU1MS01LjU3NC0xLjU0N2wxLjc3Ny0zLjMzYzAuOTk1LDAuNjg0LDIuNjY1LDEuMzYzLDMuODc3LDEuMzYzYzAuNjIsMCwxLjUzNS0wLjI4NywxLjUzNS0xLjAyMQogIGMwLTEuMDQ4LTEuNTM1LTEuMTAzLTMuMDcyLTEuNDk1Yy0xLjUzMy0wLjM5My0zLjA2Ni0xLjEyNS0zLjA2Ni0zLjUzNmMwLTMuMzAyLDMuMDY2LTQuNzY3LDYuMDg4LTQuNzY3CiAgYzEuNTYyLDAsMy4xMjUsMC4yMzUsNC41NDksMC44NjRMNjQuMjMyLDUuMjJ6Ii8+CjxwYXRoIGZpbGw9IiMyQTczQ0MiIGQ9Ik0xMDgsMTUuMjAzaC00Ljl2LTEuNDk1aC0wLjA1NGMtMC44NjIsMS4zMzYtMi41NjIsMS45MzgtNC4xNzUsMS45MzhjLTQuMDk2LDAtNi45NzUtMy4zMjgtNi45NzUtNy4xOAogIGMwLTMuODQ4LDIuODI4LTcuMTUxLDYuOTItNy4xNTFjMS41ODgsMCwzLjI2LDAuNTc2LDQuMjgzLDEuNzU0VjEuNzYyaDQuODk5TDEwOCwxNS4yMDNMMTA4LDE1LjIwM3ogTTk2Ljk1OSw4LjQ5NQogIGMwLDEuNzAyLDEuMTYsMy4wMTIsMy4xNSwzLjAxMmMxLjk5MiwwLDMuMTQ3LTEuMzA4LDMuMTQ3LTMuMDEyYzAtMS42NTEtMS4xNTUtMy4wMzktMy4xNDctMy4wMzkKICBDOTguMTE5LDUuNDU3LDk2Ljk1OSw2Ljg0NCw5Ni45NTksOC40OTV6Ii8+CjxwYXRoIGZpbGw9IiMyQTczQ0MiIGQ9Ik04Mi4xNjMsOS4yODNINzEuODQ2YzAsMS45MzcsMS4wNTMsMi45ODQsMy4wNzIsMi45ODRjMS4wNSwwLDEuODAzLTAuMzM5LDIuMzQzLTEuMjMxaDQuNzE0CiAgYy0wLjc4MSwzLjE3MS0zLjg3OSw0LjYxMi03LjAyOSw0LjYxMmMtNC41NzUsMC03Ljk5NS0yLjUxNy03Ljk5NS03LjE1MmMwLTQuNDgsMy4xNDctNy4xNzgsNy42NDQtNy4xNzgKICBjNC43OTMsMCw3LjU3LDIuODgzLDcuNTcsNy40NjZMODIuMTYzLDkuMjgzTDgyLjE2Myw5LjI4M3ogTTc3LjYxMSw2LjUzYy0wLjI0My0xLjI4NC0xLjQ1NS0yLjEyMi0yLjc3My0yLjEyMgogIGMtMS40MjksMC0yLjYwOSwwLjczMS0yLjkxLDIuMTIySDc3LjYxMXoiLz4KPGc+CiAgPGc+CiAgICA8cGF0aCBmaWxsPSIjMkE3M0NDIiBkPSJNMjkuNTYxLDguMjYxYy0wLjAwNS0wLjExNi0wLjAxMy0wLjIyOS0wLjAyMi0wLjM0NGMwLDAsMC0wLjAwMSwwLTAuMDAyYzAsMCwwLTAuMDAxLDAtMC4wMDIKICAgICAgYy0wLjExLTEuMjQ3LTAuNTIyLTIuNDE0LTEuMjIxLTMuNDY4Yy0wLjMxMi0wLjQ3LTAuNjY5LTAuODk3LTEuMDY4LTEuMjhjLTAuNTgzLTAuNTYxLTEuMjU4LTEuMDI1LTIuMDE5LTEuMzkyCiAgICAgIGMtMS4xNDUtMC41NDctMi40MS0wLjgyMy0zLjc2LTAuODIzYy0wLjEzMiwwLTAuMjcsMC4wMDItMC40MDksMC4wMDdDMjAuMTE0LDEsMTkuMTk3LDEuMTgsMTguMzM1LDEuNDk3CiAgICAgIGMtMC44NjksMC4zMTQtMS42MjYsMC43MjktMi4yNDUsMS4yMjdjLTAuMTI2LDAuMS0wLjI2MywwLjIyMy0wLjQxLDAuMzU4bC0wLjEwNiwwLjEwNEwxNS40MjksMy4zNGgwLjAwMWgwLjAwMWwtMC4wNjgsMC4wNjcKICAgICAgTDE1LjMzLDMuNDQzbC0wLjE3MywwLjE4MmMtMC4xMjgsMC4xNDQtMC4yNSwwLjI4OC0wLjM2NCwwLjQyOWwtMC4wMDEtMC4wMDJsLTAuMDA0LTAuMDA0Yy0wLjIzNywwLjI4OC0wLjQ1NiwwLjU4Ni0wLjYxNywwLjg1NAogICAgICBjLTAuMTA5LDAuMTcyLTAuMjE2LDAuMzQ5LTAuMzE4LDAuNTI2TDEyLjQ0LDguMjg1bDAuMDAyLDAuMDAybC0wLjA3NCwwLjE0NWwtMC4xNTYsMC4zMTZjLTAuMzEsMC42MjctMC42NDIsMS4yNTItMS4wMTMsMS43NjgKICAgICAgYy0wLjgyNywwLjkwNy0xLjc2MiwxLjM1MS0yLjk2NCwxLjM1MWMtMC4wODQsMC0wLjE3LTAuMDA0LTAuMjU4LTAuMDA5Yy0wLjcyNC0wLjAyOS0xLjM0NS0wLjItMS44OTYtMC41MjYKICAgICAgYy0wLjA1OS0wLjAzNS0wLjExNi0wLjA3MS0wLjE3MS0wLjEwOGMtMC40NS0wLjI5OS0wLjc5NS0wLjY4My0xLjA1My0xLjE2MmMtMC4yOTEtMC41NDMtMC40Mi0xLjA5OC0wLjQwMi0xLjY4NgogICAgICBDNC40NTYsOC4zNiw0LjQ1Nyw4LjM0Niw0LjQ1Nyw4LjMzM0M0LjQ5Niw3LjM5Nyw0Ljg1Myw2LjY2OSw1LjU3Miw2LjA0QzUuNzQ3LDUuODg5LDUuOTMsNS43NjEsNi4xMjEsNS42NDcKICAgICAgYzAuMDI3LTAuMDE2LDAuMDU0LTAuMDMxLDAuMDgxLTAuMDQ1YzAuNTM0LTAuMjkxLDEuMTQyLTAuNDM2LDEuODM5LTAuNDM2bDAuMjE3LDAuMDA2QzkuMzY1LDUuMjE0LDEwLjIxOSw1LjU2LDEwLjksNi4yMzUKICAgICAgTDEzLjAzNiwyLjRjLTAuNTExLTAuMzQyLTEuMDg4LTAuNjM2LTEuNzI0LTAuODc1Yy0wLjAyNC0wLjAwOS0wLjA0OS0wLjAxOS0wLjA3NC0wLjAyN2MtMC4wNzYtMC4wMjctMC4xNTEtMC4wNTUtMC4yMjktMC4wOAogICAgICBDMTAuMzMzLDEuMTkyLDkuNjI0LDEuMDUzLDguODk0LDAuOTlsMCwwQzguODc2LDAuOTg3LDguODU2LDAuOTg1LDguODM4LDAuOTgzQzguNzI2LDAuOTc2LDguNjEyLDAuOTYyLDguNSwwLjk1NwogICAgICBDOC4zNzgsMC45NTIsOC4yNTUsMC45NSw4LjEzNSwwLjk0OUg4LjA2NmMtMS4zNDMsMC4wMDUtMi41OTEsMC4yOC0zLjczMiwwLjgyNUMzLjA1NiwyLjM5LDIuMDIsMy4yODcsMS4yNTIsNC40NDMKICAgICAgQzAuNDg2LDUuNTk5LDAuMDY4LDYuODgyLDAuMDA4LDguMjU5QzAuMDAzLDguMzc3LDAsOC40OTQsMCw4LjYwOWMtMC4wMDEsMS45MjYsMC43MDEsMy42MiwyLjA5Nyw1LjA0MgogICAgICBjMS40NTcsMS40OTIsMy4zNTIsMi4yOTYsNS42MjcsMi4zOTFjMC4xNDYsMC4wMDYsMC4yOSwwLjAxLDAuNDM0LDAuMDFjMS4yODcsMCwyLjQ3OC0wLjIyOSwzLjU0Ni0wLjY4NwogICAgICBjMC4yNjctMC4xMTQsMC41MjYtMC4yNDgsMC43OTEtMC4zOTdjMC4xNDQtMC4wODMsMC4yOC0wLjE3MSwwLjQxNS0wLjI2NWwwLjEtMC4wNjdsMC4xNjgtMC4xMTUKICAgICAgYzAuMjAyLTAuMTQ1LDAuMzkxLTAuMzAyLDAuNTc1LTAuNDY5bDAuMDY0LTAuMDYxYzAuMTA4LTAuMTAzLDAuMjE2LTAuMjA3LDAuMzE4LTAuMzE0bDAuMzgzLTAuNDMzbDAuMTQ2LTAuMTgzbDAuMDY4LTAuMQogICAgICBsMC4wNjgtMC4wOThjMC41NjktMC45NTYsMi40MjEtNC40MzUsMi40MjEtNC40MzVWOC40MjFsMC4xMS0wLjIxMmwwLjA5Mi0wLjE2NmMwLjI3My0wLjQ5NywwLjQ3LTAuODUsMC43MzEtMS4yMjFsMC4wMDctMC4wMTEKICAgICAgYzAuNjA5LTAuODgzLDEuNjU2LTEuNTEyLDIuODktMS42MThjMi4wNy0wLjE3OCwzLjg4NCwxLjE4Miw0LjA1MSwzLjAzOGMwLjE2NiwxLjg1Ni0xLjM3OCwzLjUwNS0zLjQ0OCwzLjY4NAogICAgICBjLTAuNDMxLDAuMDM3LTAuODUsMC4wMDgtMS4yNDUtMC4wNzlsLTAuMDEsMC4wMDRjLTEuNTE5LTAuMzE2LTIuNDg2LTEuNDI0LTIuOTYzLTEuOTE5bC0xLjk5MiwzLjY2MwogICAgICBjMCwwLDAuNjE5LDAuNjI0LDEuMDQzLDAuOTM2YzAuNDI1LDAuMzExLDAuOTc0LDAuNjE3LDEuNDEyLDAuODA3YzEuMDYzLDAuNDU0LDIuMjE5LDAuNzI2LDMuNDk2LDAuNzI2CiAgICAgIGMwLjE0OCwwLDAuMTE4LDAsMC4yNzItMC4wMDZjMi4yNzMtMC4wOTUsNC4yOTktMC45NjYsNS43Ni0yLjQ1OGMxLjM4NC0xLjQxNywyLjEzNS0zLjAzNSwyLjE0Mi00Ljk1VjguNTgyCiAgICAgIEMyOS41NjgsOC40NzYsMjkuNTY1LDguMzY5LDI5LjU2MSw4LjI2MXoiLz4KICA8L2c+CjwvZz4KPGc+CiAgPHBhdGggZmlsbD0iIzJBNzNDQyIgZD0iTTM3LjE4MSwxNS42NTdjLTEuMDMzLDAtMS45Ny0wLjEyLTIuODExLTAuMzZjLTAuODQxLTAuMjQtMS41NTktMC42MTktMi4xNTQtMS4xMzkKICAgIGMtMC41OTctMC41Mi0xLjA1Ny0xLjE4Mi0xLjM4MS0xLjk4NXMtMC40ODYtMS43NzEtMC40ODYtMi44OTlWMS43NTloNC43Mjd2Ny40NTVjMCwwLjg0NSwwLjIwMiwxLjQ1NywwLjYwNSwxLjgzOQogICAgYzAuNDA0LDAuMzgzLDAuOTE3LDAuNTc0LDEuNTM5LDAuNTc0YzAuNjM2LDAsMS4xNTItMC4xNzgsMS41NS0wLjUzNWMwLjM5Ni0wLjM1NywwLjU5Ni0wLjk0OSwwLjU5Ni0xLjc4MVYxLjc1OWg0LjcyN3Y3LjQxNgogICAgYzAsMS4xNjgtMC4xNjYsMi4xNjEtMC40OTcsMi45NzhjLTAuMzMxLDAuODE4LTAuNzk4LDEuNDg2LTEuMzk5LDIuMDA2Yy0wLjYwNCwwLjUyLTEuMzMxLDAuODk4LTIuMTg2LDEuMTM5CiAgICBDMzkuMTU2LDE1LjUzNywzOC4yMTMsMTUuNjU3LDM3LjE4MSwxNS42NTd6Ii8+CjwvZz4KPC9zdmc+">
+			</div>
+		</div>
+	</header>
+	<div class="full_wrap join_bg">
+		<div class="content">
+			<div class="join">
+				<h1>Your Course to Success</h1>
+				<p>Build skills with courses, certificates, and degrees online from world-class universities and companies</p>
+				<button>Join for Free</button>
+			</div>
+		</div>
+	</div>
+	<div class="full_wrap ">
+		<div class="content partner">
+			<a href="#">We collaborate with 200+ leading universities and companies</a>
+			<img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/front-page-story/partners/illinois.svg?auto=format%2Ccompress&dpr=1&w=&h=32">
+			<img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/front-page-story/partners/duke.svg?auto=format%2Ccompress&dpr=1&w=&h=37">
+			<img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/front-page-story/partners/google.png?auto=format%2Ccompress&dpr=1&w=&h=37">
+			<img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/front-page-story/partners/umich.png?auto=format%2Ccompress&dpr=1&w=&h=55">
+			<img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/front-page-story/partners/ibm.png?auto=format%2Ccompress&dpr=1&w=&h=32">
+			<img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/front-page-story/partners/imperial.png?auto=format%2Ccompress&dpr=1&w=&h=35">
+			<img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/front-page-story/partners/stanford.svg?auto=format%2Ccompress&dpr=1&w=&h=27">
+			<img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/front-page-story/partners/penn.svg?auto=format%2Ccompress&dpr=1&w=&h=37">
+		</div>
+	</div>
+	<div class="full_wrap">
+		<div class="content skill_wrap">
+			<h1>Achieve your goals with Coursera</h1>
+			<div class="skill">
+				<img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/front-page-story/achieve-your-goals/SvgaLearn.svg?auto=format%2Ccompress&dpr=2&w=&h=55">
+				<h3>Learn the latest skills</h3>
+				<p>like business analytics, graphic design, Python, and more</p>
+			</div>
+			<div class="skill">
+				<img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/front-page-story/achieve-your-goals/teacher-img.svg?auto=format%2Ccompress&dpr=2&w=&h=55">
+				<h3>Get ready for a career</h3>
+				<p>in high-demand fields like IT, AI and cloud engineering</p>
+			</div>
+			<div class="skill">
+				<img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/front-page-story/achieve-your-goals/SvgaColorCertificate.svg?auto=format%2Ccompress&dpr=2&w=&h=55">
+				<h3>Earn a certificate or degree</h3>
+				<p>from a leading university in business, computer science, and more</p>
+			</div>
+			<div class="skill">
+				<img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/front-page-story/achieve-your-goals/SvgaCommunity.svg?auto=format%2Ccompress&dpr=2&w=&h=55">
+				<h3>Upskill your organization</h3>
+				<p>with on-demand training and development programs</p>
+			</div>
+		</div>
+	</div>
+	<div class="full_wrap learner">
+		<img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/front-page-story/achieve-your-goals/pinkish-half-circle.svg?auto=format%2Ccompress&dpr=2&w=100&h=50&q=40">
+		<div class="content learner_c">
+			<h1>Learner outcomes on Coursera</h1>
+			<h2><strong>87% of people learning</strong> for professional development <strong>report career benefits</strong> like getting a promotion, a raise, or starting a new career</h2>
+			<h4>- Coursera Learner Outcomes Survey (2019)</h4>
+			<button>Join for Free</button>
+			<button class="trycoursera">Try Coursera fr Business</button>
+		</div>
+		<img class="float_right" src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/front-page-story/achieve-your-goals/blue-dotted-blob-half.png?auto=format%2Ccompress&dpr=2&w=157&h=64&q=40">
+	</div>
+	<div class="full_wrap ">
+		<div class="content world_class">
+			<div class="single_post">
+				<h1>World-class learning for anyone, anywhere</h1>
+				<font>TOP QUALITY</font>
+				<h2>Learn from leading universities and companies</h2>
+				<h3>Start streaming on-demand video lectures today from top instructors in subjects like <strong>business, computer science, data science, language learning,</strong> & more.</h3>
+				<p>Andrew Ng, Founder, deeplearning.ai; Coursera, Co-Founder</p>
+				<img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/front-page-story/how-it-works/andrewng.png?auto=format%2Ccompress&dpr=2&w=695&h=588&q=40">
+			</div>
+			<div class="single_post">
+				<font>ACCESIBLE</font>
+				<h2>Find flexible, affordable options</h2>
+				<h3>Choose from many options including <strong>free courses</strong> and <strong>university degrees</strong> at a breakthrough price. Learn at your own pace, 100% online.</h3>
+				<img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/front-page-story/how-it-works/offerings2.png?auto=format%2Ccompress&dpr=2&w=336&h=350&q=40">
+			</div>
+			<div class="single_post">
+				<font>APPLIED LEARNING</font>
+				<h2>Master skills with in-depth learning</h2>
+				<h3>Apply what you learn with <strong>self-paced quizzes and hands-on projects.</strong> Get feedback from a global community of learners.</h3>
+				<img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/front-page-story/how-it-works/quizCompletion.png?auto=format%2Ccompress&dpr=2&w=820&h=555&q=40">
+			</div>
+			<div class="single_post">
+				<font>SHAREABLE CERTIFICATES</font>
+				<h2>Earn industry-recognized credentials</h2>
+				<h3>Demonstrate your new skills by sharing your Course Certificate, <strong>Professional Certificate, MasterTrack™ Certificate,</strong> or diploma with your network.</h3>
+				<img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/front-page-story/how-it-works/certificates4.png?auto=format%2Ccompress&dpr=2&w=446&h=341&q=40">
+			</div>
+			<h1>From the Coursera community</h1>
+			<h2 class="million">60+ million people are already learning on Coursera</h2>
+		</div>
+	</div>
+	<div class="full_wrap catalog">
+		<div class="content">
+			<h1><strong>Take the next step</strong><br>toward your personal and professional goals with Coursera.</h1>
+			<p>Join now to receive personalized recommendations from the full Coursera catalog.</p>
+			<button>Join for Free</button>
+		</div>
+	</div>
+	<div class="full_wrap ">
+		<div class="content customers">
+			<div class="visitor">
+				<h1 class="float_left">2,400+</h1>
+				<p class="float_right">Coursera for Business customers</p>
+			</div>
+			<div class="customer_logo">
+				<img src="https://d2j5ihb19pt1hq.cloudfront.net/front-page-story/enterprise-partners/loreal.svg">
+				<img src="https://d2j5ihb19pt1hq.cloudfront.net/front-page-story/enterprise-partners/pandg.svg">
+				<img src="https://d2j5ihb19pt1hq.cloudfront.net/front-page-story/enterprise-partners/novartis.svg">
+				<img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/front-page-story/enterprise-partners/telenor.png?auto=format%2Ccompress&dpr=2&w=80&h=36&q=40">
+				<img src="https://d2j5ihb19pt1hq.cloudfront.net/front-page-story/enterprise-partners/airbus.svg">
+				<img src="https://d2j5ihb19pt1hq.cloudfront.net/front-page-story/enterprise-partners/axisbank.svg">
+				<img src="https://d2j5ihb19pt1hq.cloudfront.net/front-page-story/enterprise-partners/accelya.svg">
+				<img src="https://d2j5ihb19pt1hq.cloudfront.net/front-page-story/enterprise-partners/tata.svg">
+				<img src="https://d2j5ihb19pt1hq.cloudfront.net/front-page-story/enterprise-partners/axa.svg">
+				<img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/front-page-story/enterprise-partners/danone.png?auto=format%2Ccompress&dpr=2&w=120&h=40&q=40">
+				<img src="https://d2j5ihb19pt1hq.cloudfront.net/front-page-story/enterprise-partners/sk.svg">
+			</div>
+		</div>
+	</div>
+	<div class="full_wrap">
+		<div class="content learn_more">
+			<h1>Coursera for Business</h1>
+			<p>We’ve got the solution: world-class training and development programs developed by top universities and companies. All on Coursera for Business.</p>
+			<button>Learn More</button>
+		</div>
+	</div>
+	<div class="full_wrap footer_list">
+		<div class="content">
+			<div class="ftop_list">
+				<h2>Top Online Courses</h2>
+				<a href="#">Al for Everyone </a>
+				<a href="#">Introduction to TensorFlow </a>
+				<a href="#">Neural Networks and Deep Learning</a>
+				<a href="#">Algorithms, Part 1 </a>
+				<a href="#">Algorithms, Part 2</a>
+				<a href="#">Machine Learning</a>
+				<a href="#">Machine Learning with Python</a>
+				<a href="#">Machine Learning Using Sas Viya</a>
+				<a href="#">R Programming </a>
+				<a href="#">Intro to Programming  with Matlab</a>
+				<a href="#">Data Analysis with Python</a>
+				<a href="#">Speek English Professionally</a>
+				<a href="#">The Science of Well Being</a>
+				<a href="#">Financial Market</a>
+				<a href="#">Fundamental of Everyday Leadership</a>								
+			</div>
+			<div class="ftop_list">
+				<h2>Top Online Specialization</h2>
+				<a href="#">Deep Learning</a>
+				<a href="#">Python for Everybody</a>
+				<a href="#">Data Science</a>
+				<a href="#">Applied Data Science with Python</a>
+				<a href="#">Business Foundation</a>
+				<a href="#">Architecting with Google Cloud Pllatform</a>
+				<a href="#">Excel to MySQL</a>
+				<a href="#">Advanced Machine Learning</a>
+				<a href="#">Mathematics for Machine Learning</a>
+				<a href="#">Self-Driving Cars</a>
+				<a href="#">Blockchain Revolution for the Enterprise</a>
+				<a href="#">Business Analytics</a>
+				<a href="#">Excel Skills for Business</a>
+				<a href="#">Anatomy </a>
+				<a href="#">Managing Innovation and Design Thinking</a>
+				<a href="#">Fundamental of Positive Psychology</a>
+			</div>
+			<div class="ftop_list">
+				<h2>Online Certificates</h2>
+				<a href="#">Google IT Support</a>
+				<a href="#">IBM Customer Engagement Specialist</a>
+				<a href="#">IBM Data Science</a>
+				<a href="#">Applied Project Management</a>
+				<a href="#">Machine Learning for Analytics</a>
+				<a href="#">Instructional Design</a>
+			</div>
+			<div class="ftop_list">
+				<h2>Online Degree Programs</h2>
+				<a href="#">Mastee's in Data Science</a>
+				<a href="#">Bachelors Degree in Computer Science</a>
+				<a href="#">Computer Science and Engineering Degree</a>
+				<a href="#">Master's in Machine Learning</a>
+				<a href="#">MBA and Business Degree</a>
+				<a href="#">MBA and Business Degree</a>
+				<a href="#">Master's in Electrical Engineering</a>
+				<a href="#">Master's in ElectricalEngineering</a>
+				<a href="#">Master's in Public Health</a>
+			</div>
+			<div class="fbottom_list">
+				<div class="colomn_list float_left">
+					<h2>Coursera</h2>
+					<a href="#">About</a>
+					<a href="#">Leadership</a>
+					<a href="#">Career</a>
+					<a href="#">Catalog</a>
+					<a href="#">Certificates</a>
+					<a href="#">Degree</a>
+					<a href="#">For Government</a>
+					<a href="#">For Campus</a>
+					<a href="#">Coronavirus Response</a>
+				</div>
+				<div class="colomn_list float_right">
+					<h2>Community</h2>
+					<a href="#">Learners</a>
+					<a href="#">Partners</a>
+					<a href="#">Developers</a>
+					<a href="#">Beta Testers</a>
+					<a href="#">Translators</a>
+					<a href="#">Blog</a>
+					<a href="#">Tech Blog</a>
+				</div>
+				<div class="colomn_list">
+					<h2>More</h2>
+					<a href="#">Tearms</a>
+					<a href="#">Privacy</a>
+					<a href="#">Help</a>
+					<a href="#">Accessibility</a>
+					<a href="#">Press</a>
+					<a href="#">Contact</a>
+					<a href="#">Directory</a>
+					<a href="#">Affiates</a>
+				</div>
+			</div>
+			<div class="social_icon">
+				<div class="app">
+					<a href="#"><img src="https://d3njjcbhbojbot.cloudfront.net/web/images/icons/download_on_the_app_store_badge_en.svg"></a>
+					<a href="#"><img src="https://d3njjcbhbojbot.cloudfront.net/web/images/icons/en_generic_rgb_wo_45.png"></a>
+				</div>
+				<ul>
+					<li><a href="#"><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/facebook.png?auto=format%2Ccompress&dpr=2&w=28&h=28"></a></li>
+					<li><a href="#"><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/linkedin.png?auto=format%2Ccompress&dpr=2&w=28&h=28"></a></li>
+					<li><a href="#"><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/twitter.png?auto=format%2Ccompress&dpr=2&w=28&h=28"></a></li>
+					<li><a href="#"><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/youtube.png?auto=format%2Ccompress&dpr=2&w=28&h=28"></a></li>
+					<li><a href="#"><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/instagram.png?auto=format%2Ccompress&dpr=2&w=28&h=28"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<footer class="full_wrap">
+		<div class="content">
+			<p>&copy; 2020 Coursera Inc. All rights reserved.</p>
+		</div>
+	</footer>
+</body>
+</html>
